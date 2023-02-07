@@ -18,7 +18,7 @@ int d = 6*time_multi; //ms
 int ctrl=  c;
 
 //Defining a variable that has a value of 0.05ms(50us)
-int del = 0.05*time_multi;
+int comm_del = 0.05*time_multi;
 
 //'start' is a variable used as a counter of pulses which alos determines the start of a waveform when its value is 0
 int start = 0;
@@ -49,8 +49,8 @@ void loop() {
     if(!digitalRead(In1)){ //Determines if Switch 1 is LOW and outputs Signal B if it is
       Serial.print("SignalB- High ");
       digitalWrite(SigB, HIGH); //Output Signal B as High
-      delay(del); // Delays for 50us(pusle width of signal B)
-      Serial.print(del);
+      delay(comm_del); // Delays for 50us(pusle width of signal B)
+      Serial.print(comm_del);
       Serial.print(" SignalB-LOW");
       Serial.print('\n');
       digitalWrite(SigB, LOW); //Output of Signal B is LOW
@@ -69,7 +69,7 @@ void loop() {
     Serial.print(" SignalA- LOW");
     Serial.print('\n');
     digitalWrite(SigA,LOW); //Output Signal A as LOW
-    inc = inc + del;//incrementing the value of inc by 50us, thus increaing the overall pulse width of the following pulse 
+    inc = inc + comm_del;//incrementing the value of inc by 50us, thus increaing the overall pulse width of the following pulse 
     Serial.print("Delay: ");
     Serial.print(b);
     Serial.print('\n');
