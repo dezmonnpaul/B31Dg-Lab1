@@ -3,6 +3,7 @@
 #define SigB 21 //Signal B
 #define In1 22 //Switch 1
 #define In2 23 //Switch 2
+
 // Defning the initial counter value to determine the initial position of the waveform
 #define INITIAL 0 //
 const int time_multi = 1000;
@@ -75,7 +76,7 @@ void loop() {
     delay(b);// Delays the change in output for b ms
     start=start+1; //Increments start by 1 to signify a pulse has been output
   }
-  //Determines if thne waveform has completed the cycle of pulses
+  //Determines if the waveform has completed the cycle of pulses
   else { 
     Serial.print("Delay: ");
     Serial.print(d); 
