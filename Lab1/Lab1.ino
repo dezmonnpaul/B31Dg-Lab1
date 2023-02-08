@@ -41,6 +41,9 @@ void setup() {
   pinMode(In2, INPUT);
 }
 
+//The loop function will be in a continous loop as the program runs
+//Each iteration outputs a single pulse to either Signal A or Signal B as required
+//pulse_count will be used to determine the output of each iteration
 void loop() {
   //First checks if the current loop is at the initial position of the waveform
   if(pulse_count==INITIAL){
