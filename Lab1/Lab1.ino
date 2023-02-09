@@ -76,8 +76,8 @@ void loop() {
     delay(b);
 
     //incrementing the value of inc by 50us, and increasing the pusle counter 
-    inc = inc + comm_del;
-    pulse_count=pulse_count+1;
+    inc +=  comm_del;
+    pulse_count++;
   }
 
   //Determines if the waveform has completed the cycle of pulses
