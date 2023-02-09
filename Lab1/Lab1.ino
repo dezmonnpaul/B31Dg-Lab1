@@ -1,9 +1,9 @@
 /*---------Definitions and Global Variables----------------------------------------------------------*/
 //Defining pins to the desired Input (In1,In2) and Outputs (SigA,SigB)
-#define SigA 15 //Signal A
-#define SigB 21 //Signal B
-#define In1 22 //Switch 1
-#define In2 23 //Switch 2
+#define SigA 1 //Signal A
+#define SigB 2 //Signal B
+#define In1 4 //Switch 1
+#define In2 5 //Switch 2
 
 // Defning the initial counter value to determine the initial position of the waveform
 #define INITIAL 0 
@@ -54,7 +54,7 @@ void loop() {
     if(!digitalRead(In1)){ 
     //Output Signal B as High for 50us
       digitalWrite(SigB, HIGH);
-      delay(comm_del); 
+      delayMicroseconds(comm_del); 
       digitalWrite(SigB, LOW); 
 
       //Increment pulse_count by 1 to allow the output of Signal A
@@ -69,11 +69,11 @@ void loop() {
   else if (pulse_count>0 && pulse_count <ctrl+1) {
     //Output Signal A as high for a+inc ms
     digitalWrite(SigA,HIGH);
-    delay(a+inc);
+    delayMicroseconds(a+inc);
     digitalWrite(SigA,LOW); 
 
     //providing a delay of b ms before the next pulse
-    delay(b);
+    delayMicroseconds(b);
 
     //incrementing the value of inc by 50us, and increasing the pusle counter 
     inc +=  comm_del;
@@ -82,7 +82,7 @@ void loop() {
 
   //Determines if the waveform has completed the cycle of pulses
   else { 
-    delay(d); //Provides a delay of d ms
+    delayMicroseconds(d); //Provides a delay of d ms
 
     //resets the values of inc and pulse_count
     inc=0; 
