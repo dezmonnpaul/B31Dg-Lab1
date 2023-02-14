@@ -1,7 +1,7 @@
 /*---------Definitions and Global Variables----------------------------------------------------------*/
 //Defining pins to the desired Input (In1,In2) and Outputs (SigA,SigB)
-#define SigA 1 //Signal A
-#define SigB 2 //Signal B
+#define SigA 2 //Signal A
+#define SigB 1 //Signal B
 #define In1 4 //Switch 1
 #define In2 5 //Switch 2
 
