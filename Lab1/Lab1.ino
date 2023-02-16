@@ -64,12 +64,12 @@ void loop() {
   //Determines if the waveform has started and 
   //if the number of pulses output has not exceeded the maximum
   else if (pulse_count>0 && pulse_count <ctrl+1) {
-    //Output Signal A as high for a+inc ms
+    //Output Signal A as high for a+inc us
     digitalWrite(SigA,HIGH);
     delayMicroseconds(a+inc);
     digitalWrite(SigA,LOW); 
 
-    //providing a delay of b ms before the next pulse
+    //providing a delay of b us before the next pulse
     delayMicroseconds(b);
 
     //incrementing the value of inc by 50us, and increasing the pusle counter 
@@ -79,7 +79,7 @@ void loop() {
 
   //Determines if the waveform has completed the cycle of pulses
   else { 
-    delayMicroseconds(d); //Provides a delay of d ms
+    delayMicroseconds(d); //Provides a delay of d us
 
     //resets the values of inc and pulse_count
     inc=0; 
