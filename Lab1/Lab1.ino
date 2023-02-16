@@ -8,21 +8,18 @@
 // Defning the initial counter value to determine the initial position of the waveform
 #define INITIAL 0 
 
-//Creating a time multipler. 
-//This allows delays in microseconds to be delays in miliseconds if time_multi = 1000
-#define time_multi 1000
 
-//Defining parameters a,b,c and d for which the values are obtained as 1.1ms,0.1ms,10,6ms respectively.
-int a = 1.1*time_multi; //ms
-int b = 0.1*time_multi; //ms
+//Defining parameters a,b,c and d for which the values are obtained as shown.
+int a = 1100; //us
+int b = 100; //us
 int c = 10;
-int d = 6*time_multi; //ms
+int d = 6000; //us
 
 //Creating a control variable to determine the behaviour depending on the state of Switch 2
 int ctrl=  c;
 
-//Defining a variable that has a value of 0.05ms(50us)
-int comm_del = 0.05*time_multi;
+//Defining a variable that has a value of 50us
+int comm_del = 50; //us
 
 //'Pulse_count' is a variable used as a counter of pulses which also 
 //determines the start of a waveform when its value is 0
