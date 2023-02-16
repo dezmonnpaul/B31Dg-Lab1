@@ -55,7 +55,7 @@ void loop() {
       digitalWrite(SigB, LOW); 
 
       //Increment pulse_count by 1 to allow the output of Signal A
-      pulse_count=pulse_count +1; 
+      pulse_count++; 
     }
     //If Switch 1 is HIGH, no there will be no output and 
     //pulse_count will remain as 0, thus disabling the output stream of pulses
