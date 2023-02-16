@@ -8,9 +8,9 @@
 // Defning the initial counter value to determine the initial position of the waveform
 #define INITIAL 0 
 
-//Creating a constant variable that can be used to increase the time multipler. 
+//Creating a time multipler. 
 //This allows delays in microseconds to be delays in miliseconds if time_multi = 1000
-const int time_multi = 1000;
+#define time_multi 1000
 
 //Defining parameters a,b,c and d for which the values are obtained as 1.1ms,0.1ms,10,6ms respectively.
 int a = 1.1*time_multi; //ms
